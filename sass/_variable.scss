@@ -9,5 +9,20 @@ $bg-danger-color:#dc3545;
 
 $main-font:"Roboto, sans-serif";
 
+//Map -> Key : value
 
+$colors:(
+"primary" :#007bff,
+"success":#198754,
+"danger" :#dc3545,
+"info":#9bc0e8,
+"waring":#ffc107);
+
+@debug map-get($colors, "primary" );
+@debug map-has-key($colors, "primary" );
+@debug map-has-key($colors, "danger" );
+@debug map-remove($colors ,"info" );
+@debug map-merge($colors, (
+    "info":#9bc0e8
+));
 

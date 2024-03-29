@@ -3,16 +3,16 @@ $base-font:1rem;
 $large-font: $base-font *2;
 $larger-font:$base-font *4;
 
-@use "sass:math";
+// @use "sass:math";
 
-@debug math.max(10px,4px,25px);
-@debug math.ceil(4.9);
-@debug math.floor(4.2);
-@debug math.abs(-10px);
-@debug math.sqrt(100);
-@debug math.pow(10,2);
-@debug math.is-unitless(10);
-@debug math.is-unitless(10px);
-@debug math.unit(10px);
-@debug math.compatible(2px,1em);
-@debug math.div(25px,2px);
+// @debug math.max(10px,4px,25px);
+// @debug math.ceil(4.9);
+// @debug math.floor(4.2);
+// @debug math.abs(-10px);
+// @debug math.sqrt(100);
+// @debug math.pow(10,2);
+// @debug math.is-unitless(10);
+// @debug math.is-unitless(10px);
+// @debug math.unit(10px);
+// @debug math.compatible(2px,1em);
+// @debug math.div(25px,2px);
