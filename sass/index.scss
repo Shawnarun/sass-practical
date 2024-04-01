@@ -3,6 +3,11 @@
 @import "button";
 @import "font";
 
+//px to rem -> 1 rem 16px
+@function px_to_rem($px){
+    @return ($px/16)+ rem;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -23,6 +28,20 @@ nav{
         display: inline-block;
         padding: 5px 10px;
         color: $light;
+
+        &:hover{
+            color: map-get($colors, "warning");
+            background-color: #ae1717;
+            border-radius: 50px;
+            transition: 1s;
+            &:nth-child(2n){
+                color: #3f1fa8;
+            }
+        }
+
+        &:nth-child(2n){
+            color: #ae1717;
+        }
        
     }
    
@@ -32,10 +51,13 @@ nav{
 $bg-color:#000;
 $text-color:#000;
 .d1{
-    height: 50px;
+    height: auto;
     width: 100vw;
     margin: 20px 0;
+    padding: 15px;
     background-color: $bg-color;
+    
+    @extend %extend-border;
 
     @if($bg-color==$text-color){
         color: #fff;
@@ -43,3 +65,25 @@ $text-color:#000;
 
 }
 
+@mixin text-style-01{
+    font-size: px_to_rem(32);
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.title{
+ @include text-style-01;
+ text-transform: uppercase;
+}
+
+.para{
+@include text-style-01;
+ text-transform: lowercase;
+}
+
+%extend-border{
+    border: 1px solid red;
+    padding:5px;
+
+}
