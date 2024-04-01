@@ -4,13 +4,12 @@
 @import "font";
 
 body{
-    background-color:$primary-color ;
     margin: 0;
     padding: 0;
 
 }
 p{
-    color: $light;
+    color: $primary-color;
     font-family: $main-font;
     font-size: $base-font;
 }
@@ -24,6 +23,8 @@ nav{
         display: inline-block;
         padding: 5px 10px;
         color: $light;
+       
     }
+   
 }
 

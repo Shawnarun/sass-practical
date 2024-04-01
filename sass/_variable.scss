@@ -16,13 +16,37 @@ $colors:(
 "success":#198754,
 "danger" :#dc3545,
 "info":#9bc0e8,
-"waring":#ffc107);
+"warning":#ffc107
+);
 
-@debug map-get($colors, "primary" );
-@debug map-has-key($colors, "primary" );
-@debug map-has-key($colors, "danger" );
-@debug map-remove($colors ,"info" );
-@debug map-merge($colors, (
-    "info":#9bc0e8
-));
+@each $key ,$val in $colors{
+    .text-#{$key}{
+        color: $val;
+    }
+
+    .bg-#{$key}{
+        background-color: $val;
+    }
+
+    @for $i from 1 through 3{
+        .text-#{$key}-light-#{$i}{
+            color: lighten($val, $i*10);
+        }
+        .bg-#{$key}-light-#{$i}{
+            background-color: lighten($val, $i*10);
+        }
+
+        .text-#{$key}-dark-#{$i}{
+            color: darken($val, $i*10);
+        }
+        .bg-#{$key}-dark-#{$i}{
+            background-color: darken($val, $i*10);
+        }
+
+    }
+
+
+}
+
+
 
