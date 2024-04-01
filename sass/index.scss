@@ -28,3 +28,18 @@ nav{
    
 }
 
+
+$bg-color:#000;
+$text-color:#000;
+.d1{
+    height: 50px;
+    width: 100vw;
+    margin: 20px 0;
+    background-color: $bg-color;
+
+    @if($bg-color==$text-color){
+        color: #fff;
+    }
+
+}
+
